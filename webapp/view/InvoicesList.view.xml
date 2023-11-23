@@ -1,0 +1,25 @@
+<mvc:View
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	controllerName="com.vaibhavmojidra.filteringusingsearchfielddemo.controller.InvoicesList">
+	<List
+		id="invoicesList"
+		class="sapUiResponsiveMargin"
+		width="auto"
+		items="{invoice>/Invoices}"
+		>
+		<headerToolbar>
+			<Toolbar>
+				<Title text="Invoices"/>
+				<ToolbarSpacer/>
+				<SearchField
+					width="50%"
+					search=".onSearchSetFilter"
+				/>
+			</Toolbar>
+		</headerToolbar>
+		<items>
+			<ObjectListItem title="{invoice>ProductName} x {invoice>Quantity}"/>
+		</items>
+	</List>
+</mvc:View>
